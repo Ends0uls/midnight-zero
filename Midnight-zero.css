@@ -228,11 +228,7 @@
 	background: #00000000 !important; /* Why do you do this, Discord Nitro themes.. */
   }
   
-  /* Align small bot messages with large ones */
-  /* Alternately, you could remove their background color or just live with mismatched lengths */
-  [class^="gridContainer_"], [class^="embedWrapper_"] {
-	min-width: 525px;
-  }
+
 
   /*discord loading page*/
 .container__827e6.fixClipping__84826{
