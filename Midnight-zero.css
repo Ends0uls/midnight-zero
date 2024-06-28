@@ -211,12 +211,6 @@
     transition: max-height 1s ease;
 }
 
-[class*=containerDefault_][data-dnd-name]+[class*=container_]:has([class*=spineBorder_], li[class*=container_]) {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.25s ease;
-}
-
 [class*=expandedFolderBackground_]~[class*=listItem_]:nth-child(2)>div:before {
     content: attr(data-dnd-name);
     position: absolute;
@@ -247,5 +241,3 @@
 [class*=collapsed_] {
     background: none !important;
 }
-
-
