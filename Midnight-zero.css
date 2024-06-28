@@ -204,6 +204,7 @@
     backdrop-filter: blur(5px);
 }
 
+
 [class*=containerDefault_][data-dnd-name]:hover+[class*=container_]:has([class*=spineBorder_]),
 [class*=containerDefault_][data-dnd-name]+[class*=container_]:has([class*=spineBorder_], li[class*=container_]):hover {
     max-height: max-content;
@@ -246,3 +247,5 @@
 [class*=collapsed_] {
     background: none !important;
 }
+
+
