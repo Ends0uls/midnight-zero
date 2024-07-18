@@ -249,9 +249,6 @@
   transform: translateY(-10px) scale(1.5);
 }
 
-[class*=guildSection_] img[class*=otherEmoji_] {
-  transition: transform .2s ease;
-  &:hover {
-    transform: scale(2);
-  }
+img[class="emoji otherEmoji_e58351"]:hover {
+  transform: scale(2);
 }
