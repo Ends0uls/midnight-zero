@@ -248,3 +248,9 @@
 [class^=reaction_]:not(:has(.burstGlow_ec6b19)):hover .emoji {
   transform: translateY(-10px) scale(1.5);
 }
+[class*=guildSection_] img[class*=otherEmoji_] {
+  transition: transform .2s ease;
+  &:hover {
+    transform: scale(2);
+  }
+}
