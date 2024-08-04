@@ -152,21 +152,21 @@
 	}
 }
 
-.appLauncherOnboardingCommandName_bf880c.clickable__09456 {
+.appLauncherOnboardingCommandName_f9f2ca.clickable_f9f2ca {
 	background: 0 0;
 	padding-left: 0;
 }
 
-.appsIcon_ed21e9 {
+.appsIcon_f9f2ca {
 	display: none;
 }
 
-.executedCommand__4fb1a .appLauncherOnboardingCommandName_bf880c:hover {
+.executedCommand_f9f2ca .appLauncherOnboardingCommandName_f9f2ca:hover {
 	background: 0 0;
 }
 
 /* Discord loading page */
-.container__827e6.fixClipping__84826 {
+.container_e40c16.fixClipping_c7e9c6 {
 	background: 0 0;
 	backdrop-filter: blur(5px);
 }
@@ -218,4 +218,39 @@
 
 img[class="emoji otherEmoji_e58351"]:hover {
 	transform: scale(2);
+}
+
+/* "(edited)" text timestamps */
+span[class*="timestamp_"] time::before {
+    content: '✎ ' attr(aria-label);
+    font-size: 0.625rem;
+    font-weight: 400;
+}
+
+/* message header timestamps */
+span[class*="timestampInline_"] time::before {
+  content: attr(aria-label);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* header-less multi-line hover timestamps */
+span[class*="timestampVisibleOnHover_"] time::before {
+  content: attr(aria-label);
+  position: absolute;
+  font-size: 0.6rem;
+  line-height: 0.85rem;
+  width: 65px;
+  left: -1px;
+  top: -2px;
+}
+
+/* hide the old timestamps */
+span[class*="timestampInline_"], span[class*="timestampVisibleOnHover_"] {
+  font-size: 0rem !important;
+}
+span[class*="edited_"] {
+    position: relative;
+    right: 95px;
+    color: transparent;
 }
