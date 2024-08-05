@@ -301,3 +301,7 @@ span[class*="edited_"] {
 [class^=guildSidebar_] [class^=bottomRow_]:has([class*=bottomRowActionDisabled_]) [class*=bottomRowActionDisabled_] {
   display: none;
 }
+/* message buttons above the message */
+[class*=buttonContainer] > [class*=buttons_] {
+    transform: translateY(-50%);
+}
