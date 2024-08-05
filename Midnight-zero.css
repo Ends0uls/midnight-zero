@@ -6,211 +6,251 @@
  * @invite nz87hXyvcy
  * @website https://github.com/Htbatmann/midnight-zero
  * @source https://github.com/Htbatmann/midnight-zero/midnight-zero.theme.css
- */
+
+*/
 
 /* IMPORTANT: make sure to enable dark mode in discord settings for the theme to apply properly!!! */
 
 @import url('https://refact0r.github.io/midnight-discord/midnight.css');
 @import url("https://discordstyles.github.io/RadialStatus/dist/RadialStatus.css");
 
-/* Customize things here */
+/* customize things here */
 :root {
-	--rs-small-spacing: 2px;
-	--rs-medium-spacing: 3px;
-	--rs-large-spacing: 4px;
-	--rs-small-width: 2px;
-	--rs-medium-width: 3px;
-	--rs-large-width: 4px;
-	--rs-avatar-shape: 50%;
-	--rs-online-color: #43b581;
-	--rs-idle-color: #faa61a;
-	--rs-dnd-color: #f04747;
-	--rs-offline-color: #636b75;
-	--rs-streaming-color: #643da7;
-	--rs-invisible-color: #747f8d;
-	--rs-phone-color: var(--rs-online-color);
-	--rs-phone-visible: block;
+	--rs-small-spacing: 2px; /* Gap between avatar and status for members list/dms | MUST end in px */
+	--rs-medium-spacing: 3px; /* Gap between avatar and status for User popout | MUST end in px */
+	--rs-large-spacing: 4px; /* Gap between avatar and status for User profiles | MUST end in px */
+  
+	--rs-small-width: 2px; /* Thickness of status border for members list/dms | MUST end in px */
+	--rs-medium-width: 3px; /* Thickness of status border for User popout | MUST end in px */
+	--rs-large-width: 4px; /* Thickness of status border for User profile | MUST end in px */
+  
+	--rs-avatar-shape: 50%; /* 50% for round - 0% for square */
+  
+	--rs-online-color: #43b581; /* Colour for online status */
+	--rs-idle-color: #faa61a; /* Colour for idle status */
+	--rs-dnd-color: #f04747; /* Colour for dnd status */
+	--rs-offline-color: #636b75; /* Colour for offline status */
+	--rs-streaming-color: #643da7; /* Colour for streaming status */
+	--rs-invisible-color: #747f8d; /* Colour for invisible status - Note: this will only show for your own invisibility */
+	--rs-phone-color: var(--rs-online-color); /* Colour of the ring and phone icon when a user is on their phone |  */
+  
+	--rs-phone-visible: block; /* Visibility of the phone icon next to a users avatar. | block = visible | none = hidden */
+	/* font, change to 'gg sans' for default discord font*/
 	--font: 'figtree';
+
+	/* top left corner text */
 	--corner-text: 'Midnight';
-	--online-indicator: var(--accent-2);
-	--dnd-indicator: hsl(340, 60%, 60%);
-	--idle-indicator: hsl(50, 60%, 60%);
-	--streaming-indicator: hsl(260, 60%, 60%);
-	--accent-1: hsl(190, 70%, 60%);
-	--accent-2: hsl(190, 70%, 48%);
-	--accent-3: hsl(190, 70%, 42%);
-	--accent-4: hsl(190, 70%, 36%);
-	--accent-5: hsl(190, 70%, 30%);
-	--mention: hsla(190, 80%, 52%, 0.1);
-	--mention-hover: hsla(190, 80%, 52%, 0.05);
-	--text-0: white;
-	--text-1: var(--text-2);
-	--text-2: hsl(220, 25%, 70%);
-	--text-3: hsl(220, 15%, 60%);
-	--text-4: hsl(220, 15%, 40%);
-	--text-5: hsl(220, 15%, 25%);
-	--bg-1: hsl(220, 15%, 20%);
-	--bg-2: hsl(220, 15%, 16%);
-	--bg-3: hsl(220, 15%, 13%);
-	--bg-4: hsl(220, 15%, 10%);
-	--hover: hsla(230, 20%, 40%, 0.1);
-	--active: hsla(220, 20%, 40%, 0.2);
-	--message-hover: hsla(220, 0%, 0%, 0.1);
+
+	/* color of status indicators and window controls */
+	--online-indicator: var(--accent-2); /* change to #23a55a for default green */
+	--dnd-indicator: hsl(340, 60%, 60%); /* change to #f13f43 for default red */
+	--idle-indicator: hsl(50, 60%, 60%); /* change to #f0b232 for default yellow */
+	--streaming-indicator: hsl(260, 60%, 60%); /* change to #593695 for default purple */
+
+	/* accent colors */
+	--accent-1: hsl(190, 70%, 60%); /* links */
+	--accent-2: hsl(190, 70%, 48%); /* general unread/mention elements */
+	--accent-3: hsl(190, 70%, 42%); /* accent buttons */
+	--accent-4: hsl(190, 70%, 36%); /* accent buttons when hovered */
+	--accent-5: hsl(190, 70%, 30%); /* accent buttons when clicked */
+	--mention: hsla(190, 80%, 52%, 0.1); /* mentions & mention messages */
+	--mention-hover: hsla(190, 80%, 52%, 0.05); /* mentions & mention messages when hovered */
+
+	/* text colors */
+	--text-0: white; /* text on colored elements */
+	--text-1: var(--text-2); /* other normally white text */
+	--text-2: hsl(220, 25%, 70%); /* headings and important text */
+	--text-3: hsl(220, 15%, 60%); /* normal text */
+	--text-4: hsl(220, 15%, 40%); /* icon buttons and channels */
+	--text-5: hsl(220, 15%, 25%); /* muted channels/chats and timestamps */
+
+	/* background and dark colors */
+	--bg-1: hsl(220, 15%, 20%); /* dark buttons when clicked */
+	--bg-2: hsl(220, 15%, 16%); /* dark buttons */
+	--bg-3: hsl(220, 15%, 13%); /* spacing, secondary elements */
+	--bg-4: hsl(220, 15%, 10%); /* main background color */
+	--hover: hsla(230, 20%, 40%, 0.1); /* channels and buttons when hovered */
+	--active: hsla(220, 20%, 40%, 0.2); /* channels and buttons when clicked or selected */
+	--message-hover: hsla(220, 0%, 0%, 0.1); /* messages when hovered */
+
+	/* amount of spacing and padding */
 	--spacing: 12px;
-	--list-item-transition: 0.2s ease;
-	--unread-bar-transition: 0.2s ease;
-	--moon-spin-transition: 0.4s ease;
-	--icon-spin-transition: 1s ease;
-	--roundness-xl: 22px;
-	--roundness-l: 20px;
-	--roundness-m: 16px;
-	--roundness-s: 12px;
-	--roundness-xs: 10px;
-	--roundness-xxs: 8px;
-	--discord-icon: none;
-	--moon-icon: block;
-	--moon-icon-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg');
+
+	/* animations */
+	/* ALL ANIMATIONS CAN BE DISABLED WITH REDUCED MOTION IN DISCORD SETTINGS */
+	--list-item-transition: 0.2s ease; /* channels/members/settings hover transition */
+	--unread-bar-transition: 0.2s ease; /* unread bar moving into view transition */
+	--moon-spin-transition: 0.4s ease; /* moon icon spin */
+	--icon-spin-transition: 1s ease; /* round icon button spin (settings, emoji, etc.) */
+
+	/* corner roundness (border-radius) */
+	--roundness-xl: 22px; /* roundness of big panel outer corners */
+	--roundness-l: 20px; /* popout panels */
+	--roundness-m: 16px; /* smaller panels, images, embeds */
+	--roundness-s: 12px; /* members, settings inputs */
+	--roundness-xs: 10px; /* channels, buttons */
+	--roundness-xxs: 8px; /* searchbar, small elements */
+
+	/* direct messages moon icon */
+	/* change to block to show, none to hide */
+	--discord-icon: none; /* discord icon */
+	--moon-icon: block; /* moon icon */
+	--moon-icon-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* custom icon url */
 	--moon-icon-size: auto;
-	--login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4);
-	--green-to-accent-3-filter: hue-rotate(56deg) saturate(1.43);
-	--blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84) brightness(1.2);
+
+	/* filter uncolorable elements to fit theme */
+	/* (just set to none, they're too much work to configure) */
+	--login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4); /* login background artwork */
+	--green-to-accent-3-filter: hue-rotate(56deg) saturate(1.43); /* add friend page explore icon */
+	--blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84) brightness(1.2); /* add friend page school icon */
 }
 
 [class*=channelTextAreaDisabled] {
-	display: none !important;
+    display: none!important;
 }
 
-/* If it doesn't work due to themes */
+/* or if it doesn't work like because of themes: */
 [class*=channelTextAreaDisabled] {
-	opacity: 0 !important;
-	position: absolute !important;
-	height: 0px !important;
-	width: 0px !important;
-	z-index: 0 !important;
+    opacity: 0!important;
+    position: absolute!important;
+    height: 0px!important;
+    width: 0px!important;
+    z-index: 0!important;
 }
 
-/* Icon Recolor */
+/*--- Icon Recolor---*/
 .icon_d8bfb3:has(path[d^="M18.5 23c.88"]) path[d^="M18.5 23c.88"] {
-	color: var(--green-360) !important;
-	border: 1px solid rebeccapurple !important;
+    color: var(--green-360) !important;
+    border: 1px solid rebeccapurple !important;
 }
+
 
 [class^="positionContainer_"] {
 	height: calc(100vh - 180px);
+  }
+
+  [aria-label="Mute"] [aria-hidden="true"],
+[aria-label="Deafen"] [aria-hidden="true"]{
+  opacity: 0.4;
 }
 
-[aria-label="Mute"] [aria-hidden="true"],
-[aria-label="Deafen"] [aria-hidden="true"] {
-	opacity: 0.4;
+:root {
+    --dm-columns: 4;
+}
+
+[class^=privateChannels_] [class^=content_] {
+    display: grid;
+    height: unset !important;
+    grid-template-columns: repeat(var(--dm-columns), 1fr);
+
+    &> * {
+        overflow: hidden;
+        grid-column: 1 / calc(var(--dm-columns) + 1);
+    }
+}
+
+[class^=channel_]:has(
+    [href="/channels/@me"],
+    [href="/library"],
+    [href="/shop"],
+    [href="/store"],
+    [href="/family-center"],
+    [href="/message-requests"]
+) {
+    grid-column: auto;
+
+    [class*="linkButton"] {
+        padding-right: 0;
+    }
+ 
+    [class*="link_"] {
+        justify-content: center;
+        gap: 0;
+    }
+
+    [class*="avatar_"] {
+        margin: 0;
+        width: unset;
+    }
+
+    [class*="avatarWithText_"] {
+        flex-grow: unset;
+    }
+    
+    [class*="content_"] {
+        display: none;
+    }
+}
+
+.appLauncherOnboardingCommandName_bf880c.clickable__09456 {
+    background: 0 0;
+    padding-left: 0;
+}
+
+.appsIcon_ed21e9 {
+  display: none;
+}
+
+.executedCommand__4fb1a .appLauncherOnboardingCommandName_bf880c:hover {
+    background: 0 0;
 }
 
 
 
 
-
-
-
-/* Discord loading page */
-.container_e40c16.fixClipping_c7e9c6 {
-	background: 0 0;
-	backdrop-filter: blur(5px);
+  /*discord loading page*/
+.container__827e6.fixClipping__84826{
+    background: 0 0;
+    backdrop-filter: blur(5px);
 }
+
 
 [class*=containerDefault_][data-dnd-name]:hover+[class*=container_]:has([class*=spineBorder_]),
 [class*=containerDefault_][data-dnd-name]+[class*=container_]:has([class*=spineBorder_], li[class*=container_]):hover {
-	max-height: max-content;
-	transition: max-height 1s ease;
+    max-height: max-content;
+    transition: max-height 1s ease;
 }
 
 [class*=expandedFolderBackground_]~[class*=listItem_]:nth-child(2)>div:before {
-	content: attr(data-dnd-name);
-	position: absolute;
-	bottom: 8px;
-	left: 50%;
-	transform: translateX(-50%);
-	padding: 1px;
-	font-size: 10px;
-	color: #ffffff;
-	z-index: 1;
-	pointer-events: none;
-	width: 38px;
-	max-height: 27px;
-	text-align: center;
-	margin-left: -0.7px;
-	overflow: hidden;
-	letter-spacing: -0.2px;
-	line-height: 0.9;
+    content: attr(data-dnd-name);
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1px;
+    font-size: 10px;
+    color: #ffffff;
+    z-index: 1;
+    pointer-events: none;
+    width: 38px;
+    max-height: 27px;
+    text-align: center;
+    margin-left: -0.7px;
+    overflow: hidden;
+    letter-spacing: -0.2px;
+    line-height: 0.9;
 }
 
 [class*=expandedFolderIconWrapper_] svg {
-	width: 48px;
-	height: 48px;
+    width: 48px;
+    height: 48px;
 }
 
 [class*=folderIconWrapper_],
 [class*=folder_],
 [class*=collapsed_] {
-	background: none !important;
+    background: none !important;
 }
-
 /* Reactions Hover */
 [class^=reaction_]:not(:has(.burstGlow_ec6b19)) .emoji {
-	transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
 }
 [class^=reaction_]:not(:has(.burstGlow_ec6b19)):hover .emoji {
-	transform: translateY(-10px) scale(1.5);
+  transform: translateY(-10px) scale(1.5);
 }
-
-img[class="emoji otherEmoji_e58351"]:hover {
-	transform: scale(2);
+[class*=guildSection_] img[class*=otherEmoji_] {
+  transition: transform .2s ease;
+  &:hover {
+    transform: scale(2);
+  }
 }
-
-/* "(edited)" text timestamps */
-span[class*="timestamp_"] time::before {
-    content: '✎ ' attr(aria-label);
-    font-size: 0.625rem;
-    font-weight: 400;
-}
-
-/* message header timestamps */
-span[class*="timestampInline_"] time::before {
-  content: attr(aria-label);
-  font-size: 0.75rem;
-  font-weight: 500;
-}
-
-/* header-less multi-line hover timestamps */
-span[class*="timestampVisibleOnHover_"] time::before {
-  content: attr(aria-label);
-  position: absolute;
-  font-size: 0.6rem;
-  line-height: 0.85rem;
-  width: 65px;
-  left: -1px;
-  top: -2px;
-}
-
-/* hide the old timestamps */
-span[class*="timestampInline_"], span[class*="timestampVisibleOnHover_"] {
-  font-size: 0rem !important;
-}
-span[class*="edited_"] {
-    position: relative;
-    right: 95px;
-    color: transparent;
-}
-
-
-.listItem_c96c45:nth-child(3) {
-  margin-top: 11.5px;
-}
-/* --- */
-[class*="modeMuted_"]:has([class^="icon_"]) [class^="name_"] {
-    color: var(--channel-icon);
-    opacity: 40%;
-}
-/* ShowHiddenThings / Mod View / Remove actions like Kick, Ban, and Timeout if disabled due to insufficient permissions. */
-[class^=guildSidebar_] [class^=bottomRow_]:has([class*=bottomRowActionDisabled_]) [class*=bottomRowActionDisabled_] {
-  display: none;
-}
-
