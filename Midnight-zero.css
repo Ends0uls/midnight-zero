@@ -290,3 +290,14 @@ span[class*="edited_"] {
     right: 95px;
     color: transparent;
 }
+
+/* Mute Channel List Emojis */
+[class*="modeMuted_"]:has([class^="icon_"]) [class^="name_"] {
+    color: var(--channel-icon);
+    opacity: 40%;
+}
+
+/* ShowHiddenThings / Mod View / Remove actions like Kick, Ban, and Timeout if disabled due to insufficient permissions. */
+[class^=guildSidebar_] [class^=bottomRow_]:has([class*=bottomRowActionDisabled_]) [class*=bottomRowActionDisabled_] {
+  display: none;
+}
