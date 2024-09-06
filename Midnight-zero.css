@@ -318,6 +318,7 @@ span[class*="edited_"] {
         position:absolute;
     }
 }
+
 /*     Modernized audio attachments      */
 [class^="mosaicItem"] > [class^="wrapperAudio"] > [class^="audioMetadata"] {
   margin-bottom: 24px;
@@ -327,4 +328,10 @@ span[class*="edited_"] {
   bottom: 0px;
   left: 0px;
   border-radius: 0px 0px 8px 8px;
+}
+
+/* Don't show me activity */
+[class^='membersGroup']:has([role=button]),
+[class^='member'] [class^='container']:has([class*='badges']) {
+  display: none;
 }
