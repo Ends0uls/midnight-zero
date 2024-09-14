@@ -294,7 +294,7 @@ span[class*="edited_"] {
 /* Mute Channel List Emojis */
 [class*="modeMuted_"]:has([class^="icon_"]) [class^="name_"] {
     color: var(--channel-icon);
-    opacity: 40%;
+    opacity: 100%;
 }
 
 /* ShowHiddenThings / Mod View / Remove actions like Kick, Ban, and Timeout if disabled due to insufficient permissions. */
