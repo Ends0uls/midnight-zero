@@ -163,16 +163,16 @@
     }
 }
 
-.appLauncherOnboardingCommandName_bf880c.clickable__09456 {
+.appLauncherOnboardingCommandName_f9f2ca.clickable_f9f2ca {
     background: 0 0;
     padding-left: 0;
 }
 
-.appsIcon_ed21e9 {
+.appsIcon_f9f2ca {
   display: none;
 }
 
-.executedCommand__4fb1a .appLauncherOnboardingCommandName_bf880c:hover {
+.executedCommand_f9f2ca .appLauncherOnboardingCommandName_f9f2ca:hover {
     background: 0 0;
 }
 
@@ -180,7 +180,7 @@
 
 
   /*discord loading page*/
-.container__827e6.fixClipping__84826{
+.container_e40c16.fixClipping_c7e9c6{
     background: 0 0;
     backdrop-filter: blur(5px);
 }
