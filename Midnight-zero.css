@@ -495,7 +495,7 @@ a[href="https://support.discord.com"] /* hide help */
 	overflow: hidden;
 }
 .sidebar_a4d4d9 /* fix */ {
-	border-radius: 0 !important;
+	border-radius: 20 !important;
 }
 .container__93316 /* main chat */,
 .chatContent_a7d72e /* main chat inner */,
