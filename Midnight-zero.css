@@ -1268,38 +1268,6 @@ html.theme-light,
     }
 }
 
-[class^=channel_]:has(
-    [href="/channels/@me"],
-    [href="/library"],
-    [href="/shop"],
-    [href="/store"],
-    [href="/family-center"],
-    [href="/message-requests"]
-) {
-    grid-column: auto;
-
-    [class*="linkButton"] {
-        padding-right: 0;
-    }
- 
-    [class*="link_"] {
-        justify-content: center;
-        gap: 0;
-    }
-
-    [class*="avatar_"] {
-        margin: 0;
-        width: unset;
-    }
-
-    [class*="avatarWithText_"] {
-        flex-grow: unset;
-    }
-    
-    [class*="content_"] {
-        display: none;
-    }
-}
 
 .appLauncherOnboardingCommandName_f9f2ca.clickable_f9f2ca {
     background: 0 0;
